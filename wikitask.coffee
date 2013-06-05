@@ -8,7 +8,7 @@
 #   None
 #
 # Commands:
-#   hubot wikitasks - show usage of vimwiki
+#   hubot show my todos - show all todo items from vimwiki
 #
 # Author:
 #   tomswiggers
@@ -52,6 +52,6 @@ parseLine = (line) ->
     console.log line
 
 module.exports = (robot) ->
-    robot.respond /test/i, (msg) ->
+    robot.respond /show my todos/i, (msg) ->
         line = parseFile('/home/tomswiggers/projects/wiki-projects/Symfony.wiki')
         msg.send 'Here is a list of tasks'
