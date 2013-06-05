@@ -1,4 +1,5 @@
 QS = require 'querystring'
+
 # Configures the plugin
 module.exports = (robot) ->
     # waits for the string "hubot traffic" to occur

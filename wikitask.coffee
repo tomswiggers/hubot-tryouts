@@ -16,7 +16,7 @@
 fs = require 'fs'
 stream = require 'stream'
 
-liner = new stream.Transform {bjectMode: true}
+liner = new stream.Transform {objectMode: true}
  
 liner._transform = (chunk, encoding, done) ->
      data = chunk.toString()
