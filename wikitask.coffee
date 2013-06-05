@@ -43,15 +43,13 @@ parseFile = (path) ->
   source = fs.createReadStream(path)
   source.pipe(liner)
 
-  console.log 'step1'
-
-
   liner.on 'readable', () =>
-    console.log 'step2'
     parseLine line while line = liner.read()
 
 parseLine = (line) ->
-      console.log line
+  
+  if line.match /\* \[ \]/
+    console.log line
 
 module.exports = (robot) ->
     robot.respond /test/i, (msg) ->
